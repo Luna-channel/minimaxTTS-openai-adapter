@@ -31,7 +31,7 @@
 | 参数名 | 类型 | 必需 | 说明 | 示例 |
 |--------|------|------|------|------|
 | model | string | 是 | 语音模型名称 | `"speech-2.5-hd-preview"` |
-| voice | string | 是 | 声音ID，支持多种格式 | `"minimaxyaojiayin3"` 或 `"voice=minimaxyaojiayin3"` |
+| voice | string | 是 | 声音ID，支持多种格式 | `"minimax001"` 或 `"voice=minimax001"` |
 | input | string | 是 | 要转换的文本内容 | `"你好，世界！"` |
 
 #### URL 查询参数 (可选)
@@ -49,21 +49,21 @@
 1. **直接格式** (推荐，兼容现有软件如酒馆):
    ```json
    {
-     "voice": "minimaxyaojiayin3"
+     "voice": "minimax001"
    }
    ```
 
 2. **半角等号格式**:
    ```json
    {
-     "voice": "voice=minimaxyaojiayin3"
+     "voice": "voice=minimax001"
    }
    ```
 
 3. **全角等号格式** (兼容用户输入错误):
    ```json
    {
-     "voice": "voice＝minimaxyaojiayin3"
+     "voice": "voice＝minimax001"
    }
    ```
 
@@ -75,7 +75,7 @@ curl -X POST "http://localhost:6000/audio/speech?speed=1.2&vol=8.0" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "speech-2.5-hd-preview",
-    "voice": "minimaxyaojiayin3",
+    "voice": "minimax001",
     "input": "你好，这是一个测试文本。"
   }'
 ```
